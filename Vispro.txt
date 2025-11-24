@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Rumus Balok
+            Console.WriteLine("");
+            Console.WriteLine("1. Balok");
+            Console.WriteLine("");
+            string panjang, lebar, tinggi1;
+            int Panjang, Lebar, Tinggi1, volume1;
+
+            Console.Write("Masukkan Panjang balok: ");
+            panjang = Console.ReadLine();
+            Console.Write("Masukkan Lebar balok: ");
+            lebar = Console.ReadLine();
+            Console.Write("Masukkan Tinggi balok: ");
+            tinggi1 = Console.ReadLine();
+
+            Panjang = Convert.ToInt32(panjang);
+            Lebar = Convert.ToInt32(lebar);
+            Tinggi1 = Convert.ToInt32(tinggi1);
+
+
+            volume1 = Panjang * Lebar * Tinggi1;
+
+            Console.WriteLine("volume balok = {0}", volume1);
+
+            // Rumus Luas Segitiga
+            Console.WriteLine("");
+            Console.WriteLine("3. Segitiga");
+            Console.WriteLine("");
+            string alas, tinggi2;
+            const double X = 0.5;
+            double Luas;
+            int Alas, Tinggi2;
+            Console.Write("Masukkan nilai Alas: ");
+            alas = Console.ReadLine();
+            Console.Write("Masukkan nilai Tinggi: ");
+            tinggi2 = Console.ReadLine();
+            Alas = Convert.ToInt32(alas);
+            Tinggi2 = Convert.ToInt32(tinggi2);
+
+            Luas = X * Alas * Tinggi2;
+            Console.WriteLine($"Nilai Luas Segitiga: {Luas}");
+
+
+
+            // Rumus Volume Tabung
+            Console.WriteLine("");
+            Console.WriteLine("3. Tabung");
+            Console.WriteLine("");
+            const double PI = 3.14;
+            double Volume, Jari_jari, Tinggi, Lingkaran;
+            string tinggi, jari_jari;
+
+            Console.Write("Masukkan Nilai Jari - Jari: ");
+            jari_jari = Console.ReadLine();
+            Console.Write("Masukkan Nilai Tinggi: ");
+            tinggi = Console.ReadLine();
+            Jari_jari = Convert.ToDouble(jari_jari);
+            Tinggi = Convert.ToDouble(tinggi);
+
+            Lingkaran = PI * Jari_jari * Jari_jari;
+            Volume = Lingkaran * Tinggi;
+            
+            Console.WriteLine($"Nilai Lingkaran: {Lingkaran}");
+            Console.WriteLine($"Nilai Volume Tabung: {Volume}");
+
+            Console.Read();
+        }
+    }
+}

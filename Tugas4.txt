@@ -1,0 +1,146 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Pertemuan_ke_6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string pilihan;
+            Console.WriteLine("Selamat datang di RM. Timser");
+            Console.WriteLine("Menu RM");
+            Console.WriteLine("1. Makanan\n2. Minuman\n3. Gorengan \n4. Makanan Penutup \n5. Mocktail");
+            Console.Write("Masukkan Pilihan Anda: ");
+            pilihan = Console.ReadLine();
+
+            if (pilihan == "1")
+            {
+                string Makanan;
+                Console.WriteLine("Menu Makanan");
+                Console.WriteLine("a. Ayam Bakar \nb. Ikan Bakar \nc. Telur Dadar \nd. Tempe Penyet \ne. Ayam Goreng");
+                Console.Write("Masukkan Pilihan Anda: ");
+                Makanan = Console.ReadLine();
+                switch (Makanan)
+                {
+                    case "a":
+                        Console.WriteLine("Pilihan anda Ayam Bakar"); break;
+                    case "b":
+                        Console.WriteLine("Pilihan anda Ikan Bakar"); break;
+                    case "c":
+                        Console.WriteLine("Pilihan anda Telur Dadar"); break;
+                    case "d":
+                        Console.WriteLine("Pilihan anda Tempe Penyet"); break;
+                    case "e":
+                        Console.WriteLine("Pilihan anda Ayam Goreng"); break;
+                    default:
+                        Console.WriteLine("Anda Salah Input Menu di Makanan"); break;
+                }
+            }
+
+            else if (pilihan == "2")
+            {
+                string Minuman;
+                Console.WriteLine("Menu Minuman");
+                Console.WriteLine("a. Es Jeruk \nb. Jus Alpukat \nc. Air Mineral \nd. Teh Manis \ne. Teh Tawar");
+                Console.Write("Masukkan Pilihan Anda: ");
+                Minuman = Console.ReadLine();
+                switch (Minuman)
+                {
+                    case "a":
+                        Console.WriteLine("Pilihan anda Es Jeruk"); break;
+                    case "b":
+                        Console.WriteLine("Pilihan anda Jus Alpukat"); break;
+                    case "c":
+                        Console.WriteLine("Pilihan anda Air Mineral"); break;
+                    case "d":
+                        Console.WriteLine("Pilihan anda Teh Manis"); break;
+                    case "e":
+                        Console.WriteLine("Pilihan anda Teh Tawar"); break;
+                    default:
+                        Console.WriteLine("Anda Salah Input Menu di Minuman"); break;
+                }
+            }
+
+            else if (pilihan == "3")
+            {
+                string Gorengan;
+                Console.WriteLine("Menu Gorengan");
+                Console.WriteLine("a. Pisang Goreng \nb. Tahu Isi \nc. Perkedel Milu \nd. Perkedel Ikan \ne. Kentang Goreng");
+                Console.Write("Masukkan Pilihan Anda: ");
+                Gorengan = Console.ReadLine();
+                switch (Gorengan)
+                {
+                    case "a":
+                        Console.WriteLine("Pilihan anda Pisang Goreng"); break;
+                    case "b":
+                        Console.WriteLine("Pilihan anda Tahu Isi"); break;
+                    case "c":
+                        Console.WriteLine("Pilihan anda Perkedel Milu"); break;
+                    case "d":
+                        Console.WriteLine("Pilihan anda Perkedel Ikan"); break;
+                    case "e":
+                        Console.WriteLine("Pilihan anda Kentang Goreng"); break;
+                    default:
+                        Console.WriteLine("Anda Salah Input Menu di Cemilan"); break;
+                }
+            }
+            else if (pilihan == "4")
+            {
+                string Makanan_Penutup;
+                Console.WriteLine("Menu Makanan Penutup");
+                Console.WriteLine("a. Kukis Bronis \nb. Cucur \nc. Susen \nd. Onde - Onde Kacang Ijo \ne. Tolu");
+                Console.Write("Masukkan Pilihan Anda: ");
+                Makanan_Penutup = Console.ReadLine();
+                switch (Makanan_Penutup)
+                {
+                    case "a":
+                        Console.WriteLine("Pilihan anda Kukis Bronis"); break;
+                    case "b":
+                        Console.WriteLine("Pilihan anda Cucur"); break;
+                    case "c":
+                        Console.WriteLine("Pilihan anda Susen"); break;
+                    case "d":
+                        Console.WriteLine("Pilihan anda Onde - Onde Kacang Ijo"); break;
+                    case "e":
+                        Console.WriteLine("Pilihan anda Tolu"); break;
+                    default:
+                        Console.WriteLine("Anda Salah Input Menu di Makanan Penutup"); break;
+                }
+            }
+            else if (pilihan == "5")
+            {
+                string Mocktail;
+                Console.WriteLine("Menu Mocktail");
+                Console.WriteLine("a. Blue Ocean \nb. Green Latern \nc. Virgin Mojito \nd. Virgin Colada \ne. Negroni Mocktail");
+                Console.Write("Masukkan Pilihan Anda: ");
+                Mocktail = Console.ReadLine();
+                switch (Mocktail)
+                {
+                    case "a":
+                        Console.WriteLine("Pilihan anda Blue Ocean"); break;
+                    case "b":
+                        Console.WriteLine("Pilihan anda Green Latern"); break;
+                    case "c":
+                        Console.WriteLine("Pilihan anda Virgin Mojito"); break;
+                    case "d":
+                        Console.WriteLine("Pilihan anda Virgin Colada"); break;
+                    case "e":
+                        Console.WriteLine("Pilihan anda Negroni Mocktail"); break;
+                    default:
+                        Console.WriteLine("Anda Salah Input Menu di Mocktail"); break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Anda Salah Masukkan Pilihan");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}

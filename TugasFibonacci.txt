@@ -1,0 +1,70 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int pilihan;
+        string input;
+
+        do
+        {
+            Console.WriteLine("\nMenu Program");
+            Console.WriteLine("1. Deret Bilangan Fibonacci");
+            Console.WriteLine("2. Segitiga Pascal");
+            Console.WriteLine("3. Keluar");
+            Console.Write("Masukkan pilihan anda (1/2/3): ");
+            input = Console.ReadLine();
+            pilihan = Convert.ToInt32(input);
+
+            switch (pilihan)
+            {
+                case 1:
+                    {
+                        Console.Write("Masukkan jumlah bilangan Fibonacci yang ingin ditampilkan: ");
+                        int n = Convert.ToInt32(Console.ReadLine());
+
+                        int a = 0, b = 1, c, i = 0;
+                        Console.Write("Deret Fibonacci: ");
+                        while (i < n)
+                        {
+                            Console.Write(a + " ");
+                            c = a + b;
+                            a = b;
+                            b = c;
+                            i++;
+                        }
+                        Console.WriteLine();
+                    }
+                    ;
+                    break;
+                case 2:
+                    Console.Write("Masukkan jumlah baris Segitiga Pascal: ");
+                    int baris = Convert.ToInt32(Console.ReadLine());
+
+                    for (int i = 0; i < baris; i++)
+                    {
+                        for (int space = 1; space <= baris - i; space++)
+                            Console.Write(" ");
+
+                        int angka = 1;
+                        for (int j = 0; j <= i; j++)
+                        {
+                            Console.Write(angka + " ");
+                            angka = angka * (i - j) / (j + 1);
+                        }
+                        Console.WriteLine();
+                    }
+                    ;
+                    break;
+                case 3:
+                    Console.WriteLine("Terima kasih, program selesai.");
+                    break;
+                default:
+                    Console.WriteLine("Pilihan tidak valid. Coba lagi.");
+                    break;
+            }
+
+        } while (pilihan != 3);
+    }
+    }
